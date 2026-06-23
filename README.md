@@ -1,280 +1,120 @@
-# ⚽ Football Player Efficiency Analysis | Power BI
+# Football Player Efficiency Analysis (Power BI)
 
-![Dashboard Overview](Assets/Dashboard_Overview.png)
+## Project Overview
 
-## 📌 Project Overview
+Most football analysis focuses on **total goals scored**.
+This project challenges that assumption.
 
-Traditional football analysis often focuses on one question:
+Instead of asking:
 
-> **Who scored the most goals?**
+> “Who scored the most goals?”
 
-While total goals are important, they don't always reflect true player performance.
+This project asks:
 
-This project takes a different approach by analyzing **Goals per Game (GPG)** to evaluate scoring efficiency rather than scoring volume.
+> **“Who is actually more efficient at scoring?”**
 
-By comparing two groups of players, the analysis demonstrates how relying solely on raw totals can lead to misleading conclusions and poor decision-making.
+Using historical player data, this analysis compares performance across groups to uncover **hidden inefficiencies and misleading metrics**.
 
----
+## Objective
 
-## 🎯 Objective
+The goal of this project is to:
 
-The primary objectives of this project are:
+* Evaluate player performance using **goals per game (efficiency)**
+* Compare two player groups (A vs B)
+* Identify whether **higher output actually means better performance**
+* Demonstrate how **raw totals can mislead decision-making**
 
-* Evaluate player performance using **Goals per Game (Efficiency)**.
-* Compare scoring efficiency between **Group A** and **Group B** players.
-* Identify whether higher goal totals indicate better performance.
-* Demonstrate the importance of normalized metrics in sports analytics.
-* Showcase how data storytelling can reveal hidden insights.
+## Key Insight
 
----
+Group B players have **higher total goals**, but:
 
-## ❓ Business Problem
+They are **less efficient** than Group A
 
-Football clubs, scouts, and analysts often evaluate players based on cumulative statistics such as:
+* **Group A Efficiency:** 0.51 goals/game
+* **Group B Efficiency:** 0.34 goals/game
 
-* Total Goals
-* Total Appearances
-* Total Assists
+This reveals a critical insight:
 
-However, these metrics may not accurately reflect player quality.
+> **More output ≠ Better performance**
 
-This project addresses the following questions:
+## Visual Analysis
 
-* Is the player with more goals always the better performer?
-* Which player group converts appearances into goals more efficiently?
-* Can efficiency metrics reveal insights hidden behind raw totals?
-* How can data-driven analysis improve player evaluation?
+### 1. Efficiency Comparison
 
----
+![Efficiency Analysis](Assets/efficiency.png)
 
-## 🛠️ Methodology
+* Clear performance gap between groups
+* Group A consistently outperforms in efficiency
+* Highlights why averages alone can be misleading
 
-### Data Preparation
+### 2. Appearances vs Goals per Game
 
-* Cleaned and structured player performance data.
-* Standardized statistical fields.
-* Calculated efficiency-based performance metrics.
+![Scatter Plot](Assets/scatter.png)
 
-### KPI Development
+* Shows relationship between experience (appearances) and scoring rate
+* Slight downward trend suggests:
 
-#### Performance Metrics
+  * Efficiency may decrease with more matches
+  * Role, fatigue, or team dynamics may impact performance
 
-* Total Goals
-* Total Appearances
-* Goals per Game (GPG)
+## Key Learnings
 
-#### Comparative Metrics
+* **Raw metrics can be deceptive**
+  Total goals do not reflect true performance quality
 
-* Group A Efficiency
-* Group B Efficiency
-* Efficiency Difference
+* **Efficiency metrics are more meaningful**
+  Goals per game provides a normalized comparison
 
-### Dashboard Design
+* **More data ≠ better insights**
+  Without the right metric, analysis becomes misleading
 
-Created an interactive Power BI dashboard to:
+* **Data storytelling matters**
+  The same dataset can lead to completely different conclusions
 
-* Compare player groups
-* Analyze scoring efficiency
-* Visualize performance trends
-* Support data-driven decision making
+## Tools & Technologies
 
----
+* **Power BI** – Dashboard creation & visualization
+* **Data Cleaning** – Structured player dataset
+* **Basic Statistical Analysis** – Ratio metrics, comparisons
 
-## 📊 Key Insight
+## Project Structure
 
-Although **Group B** players score more goals overall, they are less efficient than **Group A**.
-
-| Group   | Goals per Game |
-| ------- | -------------- |
-| Group A | 0.51           |
-| Group B | 0.34           |
-
-### Conclusion
-
-> **More Output ≠ Better Performance**
-
-Efficiency provides a more meaningful measure of player effectiveness than raw totals alone.
-
----
-
-# 📸 Dashboard Preview
-
-## 1️⃣ Executive Dashboard
-
-![Dashboard Overview](Assets/Dashboard_Overview.png)
-
-This dashboard provides an overall view of player performance, efficiency metrics, and comparative analysis.
-
----
-
-## 2️⃣ Efficiency Comparison Analysis
-
-![Efficiency Analysis](Assets/Efficiency_Analysis.png)
-
-### Insights
-
-* Clear performance gap between player groups.
-* Group A consistently demonstrates higher scoring efficiency.
-* Highlights the importance of normalized metrics.
-
-### Business Value
-
-Decision-makers can identify high-performing players who may be overlooked when evaluating only total goals.
-
----
-
-## 3️⃣ Appearances vs Goals per Game
-
-![Scatter Plot](Assets/Appearances_vs_GPG.png)
-
-### Insights
-
-* Visualizes relationship between appearances and scoring efficiency.
-* Slight downward trend observed.
-* Suggests efficiency may decline as appearances increase.
-
-Possible factors include:
-
-* Fatigue
-* Tactical role changes
-* Team dynamics
-
-### Business Value
-
-Provides deeper context beyond simple scoring statistics.
-
----
-
-## 🔍 Key Findings
-
-### Raw Metrics Can Be Misleading
-
-Players with the highest goal totals are not always the most efficient performers.
-
-### Efficiency Metrics Matter
-
-Goals per Game provides a fair comparison across players with different numbers of appearances.
-
-### More Data Does Not Guarantee Better Insights
-
-Choosing the wrong metric can lead to incorrect conclusions.
-
-### Data Storytelling Creates Impact
-
-The same dataset can reveal completely different insights depending on how it is analyzed.
-
----
-
-## 🧰 Tools & Technologies
-
-| Tool                 | Purpose                               |
-| -------------------- | ------------------------------------- |
-| Power BI             | Dashboard Development & Visualization |
-| Power Query          | Data Cleaning & Transformation        |
-| DAX                  | KPI Calculations                      |
-| Excel / CSV          | Dataset Storage                       |
-| Statistical Analysis | Efficiency & Comparative Metrics      |
-
----
-
-## 📂 Project Structure
-
-```text
+```
 Football-Player-Efficiency-Analysis/
 │
-├── Assets/
-│   ├── Dashboard_Overview.png
-│   ├── Efficiency_Analysis.png
-│   ├── Appearances_vs_GPG.png
-│   └── Data_Model.png
-│
-├── Power BI File/
-│   └── Football_Player_Efficiency.pbix
-│
-├── Data Source.md
-├── Insights.md
-│
+├── Assets/                # Images used in README
+├── Power BI File/         # pbix dashboard
+├── Data Source.md          # raw data
+├── Insights.md             # Key findings
 └── README.md
 ```
 
----
+## How to Use
 
-## 🚀 How to Use
+1. Download the Power BI file from the repository
+2. Open it using Power BI Desktop
+3. Explore:
 
-### Step 1
+   * Player-level metrics
+   * Group comparisons
+   * Interactive filters
 
-Download the Power BI file from the repository.
+## Conclusion
 
-### Step 2
+This project demonstrates that:
 
-Open the `.pbix` file using Power BI Desktop.
+> **Performance should not be measured by volume alone, but by efficiency.**
 
-### Step 3
+By shifting focus from totals to ratios, we uncover **more accurate and meaningful insights**.
 
-Explore:
+## Future Improvements
 
-* Player-level performance metrics
-* Group comparisons
-* Efficiency analysis
-* Interactive dashboard filters
+* Add advanced metrics (xG, assists, contribution index)
+* Perform clustering of player types
+* Build predictive models for player performance
+* Expand dataset across leagues and seasons
 
----
-
-## 📚 Dataset Information
-
-The dataset contains historical football player performance statistics including:
-
-* Player Appearances
-* Goals Scored
-* Goals per Game
-* Player Group Classification
-
-The data was prepared specifically to support efficiency-based performance analysis.
-
----
-
-## 💡 Key Learnings
-
-* Total goals alone do not represent player quality.
-* Goals per Game provides a more accurate performance measure.
-* Normalized metrics improve decision-making.
-* Effective visual storytelling can uncover hidden insights.
-* Data analysis should focus on meaningful metrics rather than volume alone.
-
----
-
-## 🚀 Future Improvements
-
-### Advanced Football Metrics
-
-* Expected Goals (xG)
-* Expected Assists (xA)
-* Shot Conversion Rate
-* Player Contribution Index
-
-### Advanced Analytics
-
-* Player Segmentation using Clustering
-* Predictive Performance Modeling
-* Multi-League Comparison
-* Season-over-Season Analysis
-
----
-
-## 💼 Business Value
-
-This project demonstrates how analytics can challenge traditional assumptions and provide deeper insights into performance.
-
-The same principle extends beyond football to any industry where productivity, efficiency, and outcomes must be evaluated relative to effort and opportunity.
-
-By focusing on efficiency rather than volume, organizations can make smarter and more objective decisions.
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Aman Atri**
-
-Aspiring Data Analyst | Power BI | SQL | AI & Data Analytics
-
-⭐ If you found this project useful, consider starring the repository.
+If you found this project useful, consider starring the repository.
